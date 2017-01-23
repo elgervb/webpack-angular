@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "name": "elger",
+        "suffix": "van", 
+        "surname": "boxtel", 
+        "dateofbirth": "05/07/1976", 
+        "street": "Jozef Israelsstraat", 
+        "number": "76", 
+        "postal": "6523 CJ", 
+        "city": "Nijmegen", 
+        "country": "The Netherlands", 
+        "tel": "", 
+        "mobile": "06-24267724", 
+        "email": "info@elgervanboxtel.nl"
+    },
+    {
+        "id": 1,
+        "name": "egon",
+        "suffix": "van", 
+        "surname": "boxtel", 
+        "dateofbirth": "", 
+        "street": "", 
+        "number": "", 
+        "postal": "", 
+        "city": "", 
+        "country": "", 
+        "tel": "", 
+        "mobile": "", 
+        "email": ""
+    },
+    {
+        "id": 2,
+        "name": "pieter",
+        "suffix": "van", 
+        "surname": "boxtel", 
+        "dateofbirth": "", 
+        "street": "", 
+        "number": "", 
+        "postal": "", 
+        "city": "", 
+        "country": "", 
+        "tel": "", 
+        "mobile": "", 
+        "email": ""
+    },
+    {
+        "id": 3,
+        "name": "liesbeth",
+        "suffix": "van de", 
+        "surname": "reijt", 
+        "dateofbirth": "", 
+        "street": "", 
+        "number": "", 
+        "postal": "", 
+        "city": "", 
+        "country": "", 
+        "tel": "", 
+        "mobile": "", 
+        "email": ""
+    }
+]

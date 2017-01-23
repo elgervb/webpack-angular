@@ -62,6 +62,12 @@ export default () => ({
                 to: path.join(destination, 'assets'),
             },
         ]),
+        new CopyWebpackPlugin([
+            {
+                from: path.join(source, 'backend'),
+                to: path.join(destination, 'backend'),
+            },
+        ]),
         new webpack.NoErrorsPlugin(),
         new WebpackErrorNotificationPlugin(),
         // Automatically move all modules defined outside of application directory to vendor bundle.

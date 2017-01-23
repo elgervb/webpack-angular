@@ -1,22 +1,21 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import './helloworld/helloworld';
+import Person from './person/person';
 
-angular.module('app', [uiRouter, 'helloworld'])
+angular.module('app', [uiRouter, Person.name])
 
 .config(($stateProvider, $urlRouterProvider) => {
     'ngInject';
 
-    $urlRouterProvider.otherwise('/hello');
+    $urlRouterProvider.otherwise('/person');
 
     $stateProvider
-    .state('hello', {
-        url: '/hello',
-        template: '<helloworld name="\'AngularJS\'"></helloworld><ui-view></ui-view>',
-    })
-    .state('hello.universe', {
-        url: '/universe',
-        template: '<helloworld name="\'Universe\'"></helloworld>',
+    .state('person', {
+        url: '/person',
+        template:
+            `<helloworld name="'AngularJS'"></helloworld>
+            <personlist></personlist>
+            <ui-view></ui-view>`,
     });
 });
 
