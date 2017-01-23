@@ -48,6 +48,8 @@
     "webpack-error-notification": "0.1.6"
   },
   "devDependencies": {
+    "@types/angular-ui-router": "^1.1.36",
+    "@types/angularjs": "^1.5.14-alpha",
     "babel-cli": "6.22.2",
     "babel-core": "6.22.1",
     "babel-eslint": "7.1.1",
