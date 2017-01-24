@@ -1,21 +1,20 @@
 import template from './persondetails.html';
 
 class PersonDetailsComponentController {
-    constructor(personService, $stateParams) {
+    constructor(PersonService, $stateParams) {
         'ngInject';
-        personService.getPerson($stateParams.personId).then((person) => {
+        PersonService.getPerson($stateParams.personId).then((person) => {
             this.person = person;
         });
     }
 }
 
-export default class PersonDetailsComponent {
-    constructor() {
-        this.controller = PersonDetailsComponentController;
-        this.restrict = 'E';
-        this.template = template;
-        this.bindings = {
-
-        };
+export const PersonDetailsComponent = {
+    controller: PersonDetailsComponentController,
+    restrict: 'E',
+    template,
+    bindings: {
+        onSave: '&',
+        onCancel: '&'
     }
-}
+};

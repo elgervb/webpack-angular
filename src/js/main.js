@@ -16,6 +16,7 @@ angular.module('app', [uiRouter, Person.name])
         url: '/person',
         template:
             `<section ui-view class="d-flex flex-row">
+
             </section>`
     })
         .state('person.list', {
@@ -23,6 +24,7 @@ angular.module('app', [uiRouter, Person.name])
             template:
                 `<person-list class="person__list"></person-list>
                 <ui-view></ui-view>`
+
         })
         .state('person.list.details', {
             url: '/{personId}',

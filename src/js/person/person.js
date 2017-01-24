@@ -1,11 +1,11 @@
 import angular from 'angular';
 import FullnameFilter from './filter/fullnamefilter';
 import PersonService from './service/personservice';
-import PersonList from './component/personlist';
-import PersonDetails from './component/persondetails';
+import {PersonListComponent} from './component/personlist';
+import {PersonDetailsComponent} from './component/persondetails';
 
 export default angular.module('person', [])
-    .component('personList', new PersonList())
-    .component('personDetails', new PersonDetails())
+    .component('personList', PersonListComponent)
+    .component('personDetails', PersonDetailsComponent)
     .filter('fullname', FullnameFilter.factory)
-    .service('personService', PersonService);
+    .service('PersonService', PersonService);

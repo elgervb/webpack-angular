@@ -1,25 +1,19 @@
 import template from './personlist.html';
 
 class PersonListController {
-    constructor(personService) {
-        'ngInject';
-
-        personService.getPersons()
+    constructor(PersonService) {
+        PersonService.getPersons()
         .then((response) => {
             this.persons = response.data;
         });
     }
 }
 
-export default class PersonList {
-    constructor() {
-        'ngInject';
-
-        this.controller = PersonListController;
-        this.restrict = 'E';
-        this.template = template;
-        this.bindings = {
-            name: '<'
-        };
+export const PersonListComponent = {
+    controller: PersonListController,
+    restrict: 'E',
+    template,
+    bindings: {
+        persons: '<'
     }
-}
+};
