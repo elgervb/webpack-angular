@@ -1,10 +1,10 @@
 import template from './personlist.html';
 
 class PersonListController {
-    constructor(personservice) {
+    constructor(personService) {
         'ngInject';
 
-        personservice.getPersons()
+        personService.getPersons()
         .then((response) => {
             this.persons = response.data;
         });
@@ -19,7 +19,7 @@ export default class PersonList {
         this.restrict = 'E';
         this.template = template;
         this.bindings = {
-            name: '<',
+            name: '<'
         };
     }
 }

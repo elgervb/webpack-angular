@@ -1,5 +1,17 @@
-<h1>Person list </h1>
 
-    <ul ng-repeat="person in $ctrl.persons">
-        <li>{{person | fullname}}</li>
-    </ul>
+
+<div class="person-list">
+
+    <div class="person-list__filter">
+        <input type="text" class="form-control" placeholder="filter" ng-model="$ctrl.filter" />
+    </div>
+
+    <div class="list-group">
+        <a  class="list-group-item list-group-item-action"
+            ng-repeat="person in $ctrl.persons | filter : $ctrl.filter"
+            ui-sref="person.list.details({personId: person.id})">
+                {{person | fullname}}
+        </a>
+    </div>
+
+</div>

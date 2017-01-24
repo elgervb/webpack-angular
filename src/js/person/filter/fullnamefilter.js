@@ -12,6 +12,6 @@ export default class FullnameFilter {
 
     static factory() {
         const filter = new FullnameFilter();
-        return input => filter.filter(input);
+        return (input) => filter.filter(input);
     }
 }
