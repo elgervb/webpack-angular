@@ -1,12 +1,14 @@
+/* global angular */
 import template from './persondetails.html';
 
 class PersonDetailsComponentController {
-    constructor(PersonService, $stateParams) {
+    constructor() {
         'ngInject';
-        PersonService.getPerson($stateParams.personId).then((person) => {
-            this.person = person;
-        });
+
+        // copy person
+        this.local = angular.copy(this.person);
     }
+
 }
 
 export const PersonDetailsComponent = {
@@ -14,7 +16,6 @@ export const PersonDetailsComponent = {
     restrict: 'E',
     template,
     bindings: {
-        onSave: '&',
-        onCancel: '&'
+        person: '<'
     }
 };

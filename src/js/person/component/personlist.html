@@ -7,9 +7,11 @@
     </div>
 
     <div class="list-group">
-        <a  class="list-group-item list-group-item-action"
+        <a class="list-group-item list-group-item-action"
             ng-repeat="person in $ctrl.persons | filter : $ctrl.filter"
-            ui-sref="person.list.details({personId: person.id})">
+            ng-click="$ctrl.selected = person"
+            ng-class="{active: $ctrl.isSelected(person)}"
+        >
                 {{person | fullname}}
         </a>
     </div>

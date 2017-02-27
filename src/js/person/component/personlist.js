@@ -1,11 +1,19 @@
 import template from './personlist.html';
 
 class PersonListController {
-    constructor(PersonService) {
-        PersonService.getPersons()
-        .then((response) => {
-            this.persons = response.data;
-        });
+
+    get selected() {
+        return this.selectedPerson;
+    }
+    set selected(person) {
+        if (typeof this.onSelect === 'function') {
+            this.onSelect({person});
+        }
+        this.selectedPerson = person;
+    }
+
+    isSelected(person) {
+        return person === this.selectedPerson;
     }
 }
 
@@ -14,6 +22,7 @@ export const PersonListComponent = {
     restrict: 'E',
     template,
     bindings: {
-        persons: '<'
+        persons: '<',
+        onSelect: '&'
     }
 };

@@ -19,5 +19,6 @@
     "testPathDirs": [
       "src/js/"
     ],
+    "setupTestFrameworkScriptFile": "./spec.bundle.js",
     "testURL": "http://localhost:4000"
 }
